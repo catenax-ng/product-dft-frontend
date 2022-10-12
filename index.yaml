@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   dft-frontend:
   - apiVersion: v2
+    appVersion: 1.6.0
+    created: "2022-10-12T10:16:43.04194807Z"
+    description: A Helm chart for Kubernetes
+    digest: b30fd556dc71f9b7939be05e81baa0036ce3bc8608552cd08debf37d7e7e94c4
+    name: dft-frontend
+    type: application
+    urls:
+    - https://github.com/catenax-ng/product-dft-frontend/releases/download/dft-frontend-1.6.0/dft-frontend-1.6.0.tgz
+    version: 1.6.0
+  - apiVersion: v2
     appVersion: 1.5.0
     created: "2022-10-11T08:08:05.48530013Z"
     description: A Helm chart for Kubernetes
@@ -73,4 +83,4 @@ entries:
     urls:
     - https://github.com/catenax-ng/product-dft-frontend/releases/download/helm-1.5.0/helm-1.5.0.tgz
     version: 1.5.0
-generated: "2022-10-11T08:08:05.48531413Z"
+generated: "2022-10-12T10:16:43.04196097Z"
