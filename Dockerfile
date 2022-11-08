@@ -39,8 +39,8 @@ COPY .env .
 #RUN apk add --no-cache bash
 
 # Make our shell script executable
-#RUN chmod 777 env.sh
-#RUN chmod 777 -R /usr/share/nginx/html/*
+RUN chmod 777 env.sh
+RUN chmod 777 -R /usr/share/nginx/html/*
 
 #RUN chown ${UID}:${GID} /usr/share/nginx/html
 #USER ${UID}:${GID}
