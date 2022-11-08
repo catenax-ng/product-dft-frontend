@@ -85,8 +85,11 @@ const initKeycloak = (onAuthenticatedCallback: (loggedUser: IUser) => unknown) =
     .then(authenticated => {
       if (authenticated) {
         console.log(getParsedToken());
-        console.log(`${getUsername()} authenticated`);
-        if (Object.hasOwn(getLoggedUser().parsedToken.resource_access, Config.REACT_APP_CLIENT_ID)) {
+        console.log(`${getLoggedUser()} authenticated`);
+        if (
+          getLoggedUser()?.parsedToken?.resource_access &&
+          Object.hasOwn(getLoggedUser()?.parsedToken?.resource_access, Config.REACT_APP_CLIENT_ID)
+        ) {
           onAuthenticatedCallback(getLoggedUser());
           store.dispatch(setLoggedInUser(getLoggedUser()));
         } else {
