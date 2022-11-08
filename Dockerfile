@@ -38,4 +38,4 @@ EXPOSE 80
 #CMD ["/bin/bash", "-c", "nginx -g \"daemon off;\""]
 
 #EXPOSE 8080
-CMD ["/bin/bash", "-c", "nginx -g \"daemon off;\""]
+CMD ["/bin/bash", "-c", "/usr/share/nginx/html/env.sh && nginx -g \"daemon off;\""]
