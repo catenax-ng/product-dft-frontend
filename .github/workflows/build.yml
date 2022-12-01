@@ -13,12 +13,12 @@
 # limitations under the License.
 
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: build
+name: build-autosetup
 
 on:
   push:
     branches:
-      - 'main'
+      - 'autosetup-dft'
 
 env:
   REGISTRY: ghcr.io
@@ -42,7 +42,7 @@ jobs:
         run: npm run build
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
@@ -52,14 +52,14 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=semver,pattern={{version}},value=v1.6.0
+          images: ${{ env.REGISTRY }}/catenax-ng/product-dft-frontend-autosetup-norestrict
+          #tags: |
+            #type=semver,pattern={{version}},value=v1.7.0
           flavor: |
               latest=true
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: .
           file: ./Dockerfile
