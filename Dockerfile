@@ -47,6 +47,5 @@ EXPOSE 443
 #RUN chmod 744 -R /usr/share/nginx/html/*
 
 # Start Nginx server
-
 #CMD ["nginx", "-g", "daemon off;"]
 CMD ["/bin/bash", "-c", "/usr/share/nginx/html/env.sh && nginx -g \"daemon off;\""]
