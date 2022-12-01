@@ -1,4 +1,4 @@
-# Community Code of Conduct
+## Community Code of Conduct
 
 **Version 1.2  
 October 12, 2022**
