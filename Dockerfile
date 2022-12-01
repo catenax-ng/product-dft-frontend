@@ -23,7 +23,7 @@ COPY --from=builder /app/build /usr/share/nginx/html/
 
 # Default port exposure
 #EXPOSE 8080
-EXPOSE 80
+EXPOSE 8080
 #EXPOSE 443
 
 
