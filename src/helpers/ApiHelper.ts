@@ -21,4 +21,3 @@
 import { Config } from '../utils/config';
 
 export const HOST = Config.REACT_APP_API_URL;
-

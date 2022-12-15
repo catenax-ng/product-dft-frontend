@@ -22,11 +22,11 @@ import { GridSelectionModel, GridValidRowModel } from '@mui/x-data-grid';
 
 export interface ISubmodelList {
   id: number;
-  name: string;
+  title: string;
   value: string;
 }
 export interface ISubmodelsSlice {
-  selectedSubmodel: string;
+  selectedSubmodel: ISubmodelList;
   submodelList: ISubmodelList[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   submodelDetails: any;

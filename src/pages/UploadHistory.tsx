@@ -29,7 +29,7 @@ import StickyHeadTable from '../components/StickyHeadTable';
 import { ProcessReport } from '../models/ProcessReport';
 import ProviderService from '../services/ProviderService';
 
-export const UploadHistory: React.FC = () => {
+export default function UploadHistory() {
   const [tableData, setTableData] = useState<ProcessReport[]>([]);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
   const [page, setPage] = useState<number>(0);
@@ -83,6 +83,4 @@ export const UploadHistory: React.FC = () => {
       </Box>
     </Permissions>
   );
-};
-
-export default UploadHistory;
+}

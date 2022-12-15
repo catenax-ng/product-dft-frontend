@@ -50,6 +50,6 @@ export const schemaValidator = async (data: GridValidRowModel[]) => {
     }
   });
   if (!result.includes(false)) {
-    store.dispatch(handleDialogOpen({ data: data, url: submodelSlice.selectedSubmodel, type: 'json' }));
+    store.dispatch(handleDialogOpen({ data: data, url: submodelSlice.selectedSubmodel.value, type: 'json' }));
   }
 };

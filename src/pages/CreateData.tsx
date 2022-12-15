@@ -21,7 +21,7 @@
 
 import { Box, Grid } from '@mui/material';
 import { Tab, TabPanel, Tabs } from 'cx-portal-shared-components';
-import { SyntheticEvent, useEffect, useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 
 import DataTable from '../components/DataTable';
 import JsonInput from '../components/JsonInput';
@@ -29,23 +29,14 @@ import Permissions from '../components/Permissions';
 import PoliciesDialog from '../components/policies/PoliciesDialog';
 import SelectSubmodel from '../components/SelectSubmodel';
 import UploadFile from '../components/UploadFile';
-import { fetchSubmodelDetails } from '../features/submodels/actions';
-import { useAppDispatch, useAppSelector } from '../store/store';
 
 export default function CreateData() {
-  const { selectedSubmodel } = useAppSelector(state => state.submodelSlice);
-
-  const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState(0);
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };
 
-  useEffect(() => {
-    dispatch(fetchSubmodelDetails(selectedSubmodel));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   return (
     <Box sx={{ flex: 1, p: 4 }}>
       <Permissions values={['provider_create_contract_offer']}>
