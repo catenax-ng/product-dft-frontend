@@ -39,8 +39,8 @@ export default function CreateData() {
 
   return (
     <Box sx={{ flex: 1, p: 4 }}>
-      <Permissions values={['provider_create_contract_offer']}>
-        <Grid container spacing={2} mb={3}>
+      <Permissions values={['provider_create_contract_offer']} fullPage={true}>
+        <Grid container spacing={2} mb={3} display={'flex'} alignItems={'flex-end'}>
           <Grid item xs={3}>
             <SelectSubmodel />
           </Grid>

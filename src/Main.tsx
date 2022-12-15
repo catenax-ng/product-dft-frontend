@@ -1,5 +1,4 @@
 /********************************************************************************
- * Copyright (c) 2021,2022 FEV Consulting GmbH
  * Copyright (c) 2021,2022 T-Systems International GmbH
  * Copyright (c) 2021,2022 Contributors to the CatenaX (ng) GitHub Organisation
  *
@@ -28,7 +27,7 @@ import Sidebar from './components/Sidebar';
 import UserService from './services/UserService';
 
 export default function Main() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   const handleExpanded = (expanded: boolean) => {
     setIsExpanded(expanded);
   };

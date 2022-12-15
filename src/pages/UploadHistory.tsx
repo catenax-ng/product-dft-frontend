@@ -56,7 +56,7 @@ export default function UploadHistory() {
   }, [page, rowsPerPage, refreshTable]);
 
   return (
-    <Permissions values={['provider_view_history']}>
+    <Permissions values={['provider_view_history']} fullPage={true}>
       <Box sx={{ flex: 1, p: 4 }}>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={6}>

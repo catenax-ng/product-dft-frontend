@@ -176,7 +176,7 @@ const ContractHistory: React.FC = () => {
 
   return (
     <Box sx={{ flex: 1, p: 4 }}>
-      <Permissions values={['consumer_view_contract_agreement']}>
+      <Permissions values={['consumer_view_contract_agreement']} fullPage={true}>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={6} my={4}>
             <Typography variant="h4">Contract Agreements History</Typography>

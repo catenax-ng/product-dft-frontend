@@ -1,5 +1,4 @@
 /********************************************************************************
- * Copyright (c) 2021,2022 FEV Consulting GmbH
  * Copyright (c) 2021,2022 T-Systems International GmbH
  * Copyright (c) 2021,2022 Contributors to the CatenaX (ng) GitHub Organisation
  *
@@ -28,7 +27,7 @@ export default function Permissions(props: any) {
   const { permissions } = useAppSelector(state => state.appSlice);
   const valid = props.values ? props.values.some((item: string) => permissions?.includes(item)) : true;
   if (valid) return props.children;
-  else if (props.fullPage)
+  else if (permissions.length && props.fullPage)
     return (
       <ErrorPage title="You have no permission to view this content" description="Please contact your administrator" />
     );
