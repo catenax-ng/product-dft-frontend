@@ -86,6 +86,7 @@ export default function PoliciesDialog() {
     dispatch(setPageLoading(false));
     dispatch(clearRows());
     dispatch(handleDialogClose());
+    dispatch(removeSelectedFiles());
   };
 
   const processingReport = (r: { data: ProcessReport }, processId: string) => {
@@ -108,7 +109,6 @@ export default function PoliciesDialog() {
     } else {
       clearUpload();
       dispatch(setUploadData(defaultUploadData));
-      dispatch(removeSelectedFiles());
       if (r?.data?.status === Status.completed && r?.data?.numberOfFailedItems === 0) {
         dispatch(
           setSnackbarMessage({
@@ -146,6 +146,12 @@ export default function PoliciesDialog() {
           if (error.response.status === 404) {
             processingReportFirstCall(processId);
           } else {
+            dispatch(
+              setSnackbarMessage({
+                message: 'Upload failed!',
+                type: 'error',
+              }),
+            );
             clearUpload();
           }
         });
@@ -187,6 +193,12 @@ export default function PoliciesDialog() {
       // first call
       processingReportFirstCall(response.data);
     } catch (error) {
+      dispatch(
+        setSnackbarMessage({
+          message: 'Upload failed!',
+          type: 'error',
+        }),
+      );
       dispatch(setUploadData({ ...currentUploadData, status: Status.failed }));
       clearUpload();
     }
@@ -196,16 +208,22 @@ export default function PoliciesDialog() {
     const formData = new FormData();
     formData.append('file', selectedFiles[0]);
     formData.append('meta_data', JSON.stringify(payload));
-    formData.append('submodel', selectedSubmodel);
+    formData.append('submodel', selectedSubmodel.value);
 
     try {
       dispatch(setPageLoading(true));
-      const resp = await ProviderService.getInstance().uploadData(selectedSubmodel, formData);
+      const resp = await ProviderService.getInstance().uploadData(selectedSubmodel.value, formData);
       const processId = resp.data;
       // first call
       processingReportFirstCall(processId);
     } catch (error) {
       dispatch(setUploadData({ ...currentUploadData, status: Status.failed }));
+      dispatch(
+        setSnackbarMessage({
+          message: 'Upload failed!',
+          type: 'error',
+        }),
+      );
       clearUpload();
     }
   };

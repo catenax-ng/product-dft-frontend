@@ -169,7 +169,7 @@ npm/npmjs/-/cssom/0.3.8, MIT, approved, clearlydefined
 npm/npmjs/-/cssom/0.4.4, MIT, approved, clearlydefined
 npm/npmjs/-/cssstyle/2.3.0, MIT, approved, clearlydefined
 npm/npmjs/-/csstype/3.1.1, MIT, approved, clearlydefined
-npm/npmjs/-/cx-portal-shared-components/0.7.0, , restricted, clearlydefined
+npm/npmjs/-/cx-portal-shared-components/0.9.0, , restricted, clearlydefined
 npm/npmjs/-/damerau-levenshtein/1.0.8, BSD-2-Clause, approved, clearlydefined
 npm/npmjs/-/data-urls/2.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/date-fns/2.29.3, MIT, approved, clearlydefined
@@ -507,8 +507,8 @@ npm/npmjs/-/levn/0.4.1, MIT, approved, clearlydefined
 npm/npmjs/-/lilconfig/2.0.6, MIT, approved, clearlydefined
 npm/npmjs/-/lines-and-columns/1.2.4, MIT, approved, clearlydefined
 npm/npmjs/-/loader-runner/4.3.0, MIT, approved, clearlydefined
-npm/npmjs/-/loader-utils/2.0.3, MIT, approved, #4986
-npm/npmjs/-/loader-utils/3.2.0, MIT, approved, clearlydefined
+npm/npmjs/-/loader-utils/2.0.4, MIT, approved, #4986
+npm/npmjs/-/loader-utils/3.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/locate-path/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/locate-path/5.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/locate-path/6.0.0, MIT, approved, clearlydefined
@@ -1169,7 +1169,7 @@ npm/npmjs/@mui/system/5.10.13, MIT, approved, #3242
 npm/npmjs/@mui/types/7.2.0, MIT, approved, clearlydefined
 npm/npmjs/@mui/utils/5.10.9, MIT, approved, #3250
 npm/npmjs/@mui/x-data-grid/5.17.10, MIT, approved, #3248
-npm/npmjs/@mui/x-date-pickers/5.0.9, MIT, approved, #3247
+npm/npmjs/@mui/x-date-pickers/5.0.10, MIT, approved, #3247
 npm/npmjs/@nicolo-ribaudo/eslint-scope-5-internals/5.1.1-v1, MIT, approved, clearlydefined
 npm/npmjs/@nodelib/fs.scandir/2.1.5, MIT, approved, clearlydefined
 npm/npmjs/@nodelib/fs.stat/2.0.5, MIT, approved, clearlydefined

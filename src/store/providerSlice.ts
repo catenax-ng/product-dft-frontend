@@ -26,7 +26,6 @@ interface IProviderSlice {
   currentUploadData: ProcessReport;
   uploadStatus: boolean;
   selectedFiles: File[];
-  selectedSubmodel: string;
 }
 
 const initialState: IProviderSlice = {
@@ -46,7 +45,6 @@ const initialState: IProviderSlice = {
   },
   uploadStatus: false,
   selectedFiles: [],
-  selectedSubmodel: '',
 };
 export const providerSlice = createSlice({
   name: 'providerSlice',

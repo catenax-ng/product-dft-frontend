@@ -70,9 +70,6 @@ export const accessUsagePolicySlice = createSlice({
   name: 'accessUsagePolicySlice',
   initialState,
   reducers: {
-    setUploadType: (state, action: PayloadAction<string>) => {
-      state.uploadUrl = action.payload;
-    },
     setAccessType: (state, action: PayloadAction<string>) => {
       state.accessType = action.payload;
     },

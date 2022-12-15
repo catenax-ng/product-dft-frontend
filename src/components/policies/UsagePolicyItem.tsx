@@ -18,18 +18,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import {
-  Box,
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  MenuItem,
-  Radio,
-  RadioGroup,
-  Select,
-  Stack,
-} from '@mui/material';
-import { Input } from 'cx-portal-shared-components';
+import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Stack } from '@mui/material';
+import { Input, SelectList } from 'cx-portal-shared-components';
 
 import { setDurationUnit } from '../../features/policies/slice';
 import { useAppDispatch, useAppSelector } from '../../store/store';
@@ -53,21 +43,25 @@ export default function UsagePolicyItem({
 }: FreeTextProps) {
   const { durationUnit } = useAppSelector(state => state.accessUsagePolicySlice);
   const dispatch = useAppDispatch();
-  const durationUnits = [
+  const DURATION_UNITS = [
     {
-      label: 'Hour',
+      id: 0,
+      title: 'Hour',
       value: 'HOUR',
     },
     {
-      label: 'Day',
+      id: 1,
+      title: 'Day',
       value: 'DAY',
     },
     {
-      label: 'Month',
+      id: 2,
+      title: 'Month',
       value: 'MONTH',
     },
     {
-      label: 'Year',
+      id: 3,
+      title: 'Year',
       value: 'YEAR',
     },
   ];
@@ -108,20 +102,20 @@ export default function UsagePolicyItem({
                 }}
               />
               {constraintType === 'Duration' && (
-                <FormControl sx={{ minWidth: 80 }} size="small">
+                <FormControl sx={{ minWidth: 150 }} size="small">
                   {/* need to replace with cx-lib selectList */}
-                  <Select
+                  <SelectList
+                    keyTitle="title"
                     value={durationUnit}
-                    onChange={e => {
-                      dispatch(setDurationUnit(e.target.value));
+                    defaultValue={DURATION_UNITS[0]}
+                    items={DURATION_UNITS}
+                    label="Select Duraion"
+                    placeholder="Select Duraion"
+                    disableClearable={true}
+                    onChangeItem={e => {
+                      dispatch(setDurationUnit(e.value));
                     }}
-                  >
-                    {durationUnits.map(item => (
-                      <MenuItem key={item.label} value={item.value}>
-                        {item.label}
-                      </MenuItem>
-                    ))}
-                  </Select>
+                  />
                 </FormControl>
               )}
             </Stack>

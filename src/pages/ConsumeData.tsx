@@ -398,11 +398,14 @@ export default function ConsumeData() {
       <Grid container spacing={2} alignItems="end">
         <Grid item xs={3}>
           <SelectList
+            keyTitle="title"
             label="Select Search Type"
             fullWidth
             size="small"
             onChangeItem={e => handleSearchTypeChange(e ? e.value : '')}
             items={ITEMS}
+            defaultValue={ITEMS[0]}
+            disableClearable={true}
             placeholder="Select Search Type"
             value={searchFilterByType}
             hiddenLabel
@@ -453,8 +456,8 @@ export default function ConsumeData() {
                     renderOption={(props, option: any) => (
                       <Box
                         component="li"
-                        key={option.bpn}
                         {...props}
+                        key={option.bpn}
                         sx={{
                           display: 'flex',
                           flexDirection: 'column',
@@ -471,6 +474,7 @@ export default function ConsumeData() {
               </Grid>
               <Grid item xs={5}>
                 <SelectList
+                  keyTitle="title"
                   label="Select connectors"
                   placeholder="Select connectors"
                   fullWidth

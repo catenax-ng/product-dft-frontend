@@ -153,15 +153,6 @@ export default function UploadFile() {
               ''
             )}
           </Box>
-          &nbsp;
-          <Box>
-            <Typography variant="subtitle1" mb={1} fontWeight={'bold'}>
-              The upload must be performed in the following order:
-            </Typography>
-            <Typography variant="body1">1 - serialPartTypization.csv</Typography>
-            <Typography variant="body1">2 - batch.csv</Typography>
-            <Typography variant="body1">3 - assemblyPartRelationship.csv</Typography>
-          </Box>
           {selectedFiles.length && !uploadStatus ? (
             <Box sx={{ display: 'flex', mt: 2, flexDirection: 'column' }}>
               <Typography variant="subtitle1" mb={2} fontWeight={'bold'}>
