@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/catenax-ng/product-dft-frontend-dev
+  repository: ghcr.io/catenax-ng/tx-dft-frontend-qa
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "release3.1-dst_pip7_itr3"
    
   
 serviceAccount:
