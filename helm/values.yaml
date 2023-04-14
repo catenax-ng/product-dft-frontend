@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/catenax-ng/tx-dft-frontend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "DST_PIP8_ITR3"
+  tag: "argocd-sde-frontend"
    
   
 serviceAccount:
