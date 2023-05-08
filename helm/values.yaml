@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/catenax-ng/tx-dft-frontend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 'DST_PIP8_ITR4'
+  tag: 'rc-int'
 
 serviceAccount:
   # Specifies whether a service account should be created
