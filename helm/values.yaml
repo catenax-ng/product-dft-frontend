@@ -20,7 +20,7 @@ serviceAccount:
   name: 'dft-service'
 
 imagePullSecrets: []
-nameOverride: 'product-dft-frontend'
+nameOverride: 'product-dft-frontend-pen'
 fullnameOverride: 'dft-frontend'
 
 podAnnotations: {}
