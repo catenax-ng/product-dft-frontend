@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-frontend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 'dst_pip9_itr4'
+  tag: 'dst_pip9_itr5'
 
 serviceAccount:
   # Specifies whether a service account should be created
