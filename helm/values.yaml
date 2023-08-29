@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-frontend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "legal-dynamic-about-content-2.0.10"
+  tag: "2.1.0-int"
    
 serviceAccount:
   # Specifies whether a service account should be created
